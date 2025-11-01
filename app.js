@@ -34,7 +34,18 @@ app.use(helmet());
 app.use(xss());
 app.use(
   cors({
-    origin: "https://jobs-frontend-one.vercel.app",
+    origin: function (origin, callback) {
+      const allowedOrigins = [
+        "https://jobs-frontend-pzqrvs42m-omar-issas-projects.vercel.app",
+        "https://jobs-frontend-one.vercel.app",
+      ];
+      if (!origin) return callback(null, true);
+      if (allowedOrigins.indexOf(origin) !== -1) {
+        callback(null, true);
+      } else {
+        callback(new Error("Not allowed by CORS"));
+      }
+    },
     credentials: true,
   })
 );
