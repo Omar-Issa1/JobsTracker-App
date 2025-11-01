@@ -32,11 +32,10 @@ app.use(express.json());
 // extra packages
 app.use(helmet());
 app.use(xss());
-app.use(cors({ origin: true, credentials: true }));
+app.use(
+  cors({ origin: "https://jobstracker-app.onrender.com", credentials: true })
+);
 
-app.get("/", (req, res) => {
-  res.send("Jobs API");
-});
 // routes
 app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/jobs", authenticateUser, jobsRouter);
