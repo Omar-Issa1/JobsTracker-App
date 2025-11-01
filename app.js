@@ -34,7 +34,7 @@ app.use(helmet());
 app.use(xss());
 app.use(
   cors({
-    origin: "*",
+    origin: "https://jobs-frontend-one.vercel.app",
     credentials: true,
   })
 );
