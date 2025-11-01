@@ -32,7 +32,7 @@ app.use(express.json());
 // extra packages
 app.use(helmet());
 app.use(xss());
-app.use(cors());
+app.use(cors({ origin: "http://localhost:5173", credentials: true }));
 
 // routes
 app.use("/api/v1/auth", authRouter);

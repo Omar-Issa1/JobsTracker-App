@@ -30,7 +30,18 @@ const JobSchema = new mongoose.Schema(
     },
     status: {
       type: String,
-      enum: ["interview", "declined", "pending"],
+      required: [true, "Please provide a status"],
+      validate: {
+        validator: function (v) {
+          const allowed = ["interview", "declined", "pending"];
+          return (
+            allowed.includes(v) ||
+            (typeof v === "string" && v.trim().length > 0)
+          );
+        },
+        message:
+          "Status must be one of 'interview', 'declined', 'pending', or a custom non-empty string",
+      },
       default: "pending",
     },
     createdBy: {
