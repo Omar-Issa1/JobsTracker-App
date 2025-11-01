@@ -3,6 +3,12 @@ dotenv.config();
 import express from "express";
 const app = express();
 import "express-async-errors";
+// extra security packages
+import helmet from "helmet";
+import xss from "xss-clean";
+import cors from "cors";
+import rateLimiter from "express-rate-limit";
+// connectDB
 
 import connectDB from "./db/connect.js";
 import authenticateUser from "./middleware/authentication.js";
@@ -15,8 +21,18 @@ import notFoundMiddleware from "./middleware/not-found.js";
 import errorHandlerMiddleware from "./middleware/error-handler.js";
 
 // middleware
+app.set("trust proxy", 1);
+app.use(
+  rateLimiter({
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    max: 100, // limit each IP to 100 requests per windowMs
+  })
+);
 app.use(express.json());
 // extra packages
+app.use(helmet());
+app.use(xss());
+app.use(cors());
 
 // routes
 app.use("/api/v1/auth", authRouter);
