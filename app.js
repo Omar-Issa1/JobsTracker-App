@@ -33,7 +33,10 @@ app.use(express.json());
 app.use(helmet());
 app.use(xss());
 app.use(
-  cors({ origin: "https://jobstracker-app.onrender.com", credentials: true })
+  cors({
+    origin: "https://jobs-frontend-g8wkh1z05-omar-issas-projects.vercel.app",
+    credentials: true,
+  })
 );
 
 // routes
