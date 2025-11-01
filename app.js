@@ -40,6 +40,11 @@ app.use(
 );
 app.use(express.urlencoded({ extended: true }));
 // routes
+app.get("/", (req, res) => {
+  res.send(
+    "<h1>Jobs Tracker API</h1><a href='/api-docs'>API Documentation</a>"
+  );
+});
 app.use("/api/v1/auth", authRouter);
 app.use("/api/v1/jobs", authenticateUser, jobsRouter);
 
