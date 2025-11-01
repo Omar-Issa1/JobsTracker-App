@@ -34,8 +34,7 @@ app.use(helmet());
 app.use(xss());
 app.use(
   cors({
-    origin:
-      "https://jobs-frontend-pzqrvs42m-omar-issas-projects.vercel.app/login",
+    origin: "https://jobs-frontend-pzqrvs42m-omar-issas-projects.vercel.app",
     credentials: true,
   })
 );
