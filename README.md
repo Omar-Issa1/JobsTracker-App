@@ -171,7 +171,7 @@ app.use(cors({
 This project is deployed on **Fly.io**.  
 You can access the live Api here:  
 ```
-[https://jobstracker-app.fly.dev/api/v1](https://jobstracker-app.fly.dev/api/v1)
+https://jobstracker-app.fly.dev/api/v1
 ```
 ---
 
