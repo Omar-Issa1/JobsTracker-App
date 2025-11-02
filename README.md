@@ -14,6 +14,12 @@ https://jobstracker-app.fly.dev/api/v1
 ```
 
 ---
+## Deployment
+
+This project is deployed on **Vercel**.  
+You can access the live version here:  
+=> [https://jobs-frontend-one.vercel.app/](https://jobs-frontend-one.vercel.app/)
+---
 
 ## Features
 
@@ -176,19 +182,13 @@ flyctl deploy
 
 ---
 
-## Deployment
-
-This project is deployed on **Vercel**.  
-You can access the live version here:  
-=> [https://jwt-login-register-app.vercel.app](https://jwt-login-register-app.vercel.app)
----
 
 ## 👨‍💻 Author
 
 **Omar Issa**
 Backend Developer | Node.js Enthusiast
 GitHub: [Omar Issa](https://github.com/Omar-Issa1)
-Live APP: [Live App](https://jwt-login-register-app.vercel.app)
+Live APP: [Live App](https://jobs-frontend-one.vercel.app/)
 
 ---
 
