@@ -14,12 +14,6 @@ https://jobstracker-app.fly.dev/api/v1
 ```
 
 ---
-## Deployment
-
-This project is deployed on **Vercel**.  
-You can access the live version here:  
-=> [https://jobs-frontend-one.vercel.app/](https://jobs-frontend-one.vercel.app/)
----
 
 ## Features
 
@@ -48,7 +42,7 @@ You can access the live version here:
 1. **Clone the repository**
 
    ```bash
-   git clone https://github.com/yourusername/jobs-tracker-api.git
+   git clone https://github.com/Omar-Issa1/JobsTracker-App
    cd jobs-tracker-api
    ```
 
@@ -61,7 +55,7 @@ You can access the live version here:
 3. **Create `.env` file**
 
    ```env
-   PORT=5000
+   PORT=3000
    MONGO_URI=your_mongodb_connection_string
    JWT_SECRET=your_secret_key
    JWT_LIFETIME=1d
@@ -82,7 +76,7 @@ Use a tool like **Postman** or **Insomnia** to test the endpoints.
 Example base URL:
 
 ```
-http://localhost:5000/api/v1
+http://localhost:3000/api/v1
 ```
 
 ---
@@ -173,13 +167,20 @@ app.use(cors({
 
 ## ☁️ Deployment (Fly.io)
 
-To deploy:
 
-```bash
-flyctl launch
-flyctl deploy
+This project is deployed on **Fly.io**.  
+You can access the live Api here:  
 ```
+[https://jobstracker-app.fly.dev/api/v1](https://jobstracker-app.fly.dev/api/v1)
+```
+---
 
+---
+## Deployment (Vercel)
+
+This project is deployed on **Vercel**.  
+You can access the live version here:  
+=> [https://jobs-frontend-one.vercel.app/](https://jobs-frontend-one.vercel.app/)
 ---
 
 
