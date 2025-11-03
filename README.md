@@ -188,7 +188,8 @@ You can access the live version here:
 
 **Omar Issa**
 Backend Developer | Node.js Enthusiast
-GitHub: [Omar Issa](https://github.com/Omar-Issa1)
+GitHub:[Omar Issa](https://github.com/Omar-Issa1)
+
 Live APP: [Live App](https://jobs-frontend-one.vercel.app/)
 
 ---
