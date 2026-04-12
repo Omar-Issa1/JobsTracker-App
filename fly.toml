@@ -4,7 +4,7 @@
 #
 
 app = 'jobstracker-app'
-primary_region = 'iad'
+primary_region = 'cdg'
 
 [build]
 
